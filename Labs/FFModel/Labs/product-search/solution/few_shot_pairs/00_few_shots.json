@@ -3,16 +3,13 @@
   "expected_output":{
     "products": [
       {
-        "product_name": "Laptop",
-        "quantity": 2
+        "product_name": "Laptop"
       },
       {
-        "product_name": "Mouse",
-        "quantity": 4
+        "product_name": "Mouse"
       },
       {
-        "product_name": "Keyboard",
-        "quantity": 3
+        "product_name": "Keyboard"
       }
     ]
   }
@@ -22,12 +19,10 @@
   {
     "products": [
       {
-        "product_name": "Beachball",
-        "quantity": 1
+        "product_name": "Beachball"
       },
       {
-        "product_name": "towel",
-        "quantity": 1
+        "product_name": "towel"
       }
     ]
   }
@@ -37,8 +32,7 @@
   {
     "products": [
       {
-        "product_name": "Bottled Water",
-        "quantity": 6
+        "product_name": "Bottled Water"
       }
     ]
   }
