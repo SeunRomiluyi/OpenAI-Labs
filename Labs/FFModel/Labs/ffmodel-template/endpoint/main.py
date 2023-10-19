@@ -39,7 +39,7 @@ def set_openapi_schema(app: FastAPI)->None:
     openapi_schema = get_openapi(
         title="OpenAI Inference Endpoint",
         version="0.0.1",
-        description="A fasapi wrapper for an ffmodel openai enpoint.",
+        description="A FastAPI wrapper for an ffmodel openai enpoint.",
         routes=app.routes,
     )
     app.openapi_schema = openapi_schema

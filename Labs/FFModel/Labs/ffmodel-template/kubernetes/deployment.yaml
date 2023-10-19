@@ -1,43 +1,43 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pizza-api-deployment
+  name: ffmodel-api-deployment
   labels:
-    app: pizza-api
+    app: ffmodel-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pizza-api
+      app: ffmodel-api
   template:
     metadata:
       labels:
-        app: pizza-api
+        app: ffmodel-api
     spec:
       containers:
-      - name: pizza-api
-        image: ghcr.io/joaquinrz/pizza-api
+      - name: ffmodel-api
+        image: <image>
         imagePullPolicy: IfNotPresent
         env:
         - name: SOLUTION_CONFIG_PATH
           valueFrom:
             configMapKeyRef:
-              name: pizza-api-configmap
+              name: ffmodel-api-configmap
               key: SOLUTION_CONFIG_PATH
         - name: ENVIRONMENT_CONFIG_PATH
           valueFrom:
             configMapKeyRef:
-              name: pizza-api-configmap
+              name: ffmodel-api-configmap
               key: ENVIRONMENT_CONFIG_PATH
         - name: OPENAI_ENDPOINT
           valueFrom:
             secretKeyRef:
-              name: pizza-api-secret
+              name: ffmodel-api-secret
               key: OPENAI_ENDPOINT
         - name: OPENAI_API_KEY
           valueFrom:
             secretKeyRef:
-              name: pizza-api-secret
+              name: ffmodel-api-secret
               key: OPENAI_API_KEY
         ports:
         - containerPort: 8080
