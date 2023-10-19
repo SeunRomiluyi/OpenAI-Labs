@@ -30,11 +30,6 @@ components:
       max_tokens: 500
       temperature: 0
 
-  - name: components.evaluators.json_schema
-    supporting_data:
-      json_schema_file:
-        file_path: "../solution/data/schemas/order_schema_min.json"
-
   - name: "components.evaluators.fuzzy"
 
   - name: "components.evaluators.bleu"
